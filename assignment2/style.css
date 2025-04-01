@@ -7,7 +7,10 @@ body * {
 }
 
 img {
-    width: 20%;
+    max-width: 20%;
+    max-height: 30%;
+    width: auto;
+    height: auto;
     border: 2px solid black;
     border-radius: 2rem;
     position: absolute;
