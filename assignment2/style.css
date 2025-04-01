@@ -1,0 +1,116 @@
+body {
+    background-color: rgb(190, 190, 190);
+}
+
+body * {
+    box-sizing: border-box;
+}
+
+img {
+    width: 20%;
+    border: 2px solid black;
+    border-radius: 2rem;
+    position: absolute;
+    top: 45%;
+    left: 15%;
+}
+
+.hotpink {
+    background-color: hotpink;
+    font-family: Arial;
+}
+
+.pink {
+    background-color: pink;
+    font-family: Courier;
+}
+
+.lightpink {
+    background-color: lightpink;
+    font-family: Corsiva;
+}
+
+button {
+    background-color: orange;
+    border: 0;
+    width: 80%;
+    border-radius: 0.5rem;
+    height: 2rem;
+    color: white;
+    position: absolute;
+    left: 10%;
+    margin-top: 10%;
+}
+
+nav>ul {
+    list-style-type: none;
+}
+
+nav>ul>li {
+    display: inline;
+    color: white;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    height: 100%;
+}
+
+nav {
+    background-color: black;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    z-index: 1000;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+li:hover {
+    background-color: orange;
+}
+
+section {
+    width: 25%;
+    position: absolute;
+    top: 45%;
+    right: 15%;
+}
+
+section>div {
+    height: fit-content;
+    padding-top: 2rem;
+}
+
+iframe {
+    width: 40%;
+    height: 30%;
+    border: 3px solid hotpink;
+    position: absolute;
+    top: 10%;
+    left: 30%;
+}
+
+footer {
+    background-color: black;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    height: 5rem;
+    color: white;
+}
+
+form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    justify-items: start;
+    width: 50%;
+    position: absolute;
+    left: 25%;
+}

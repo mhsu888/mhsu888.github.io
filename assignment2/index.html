@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 2</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="#">HOME</a></li>
+            <li><a href="#">ABOUT</a></li>
+            <li><a href="#">BOOK</a></li>
+            <li><a href="#">CONTACT</a></li>
+        </ul>
+    </nav>
+    <iframe src="../assignment1/index.html" title="Assignment 1 Webpage"></iframe>
+    <img src="tree.jpg" alt="Cherry blossom tree">
+    <section>
+        <div class="hotpink">This is the hotpink paragraph, font family is Arial</div>
+        <div class="pink">This is the pink paragraph, font family is Courier</div>
+        <div class="lightpink">This is the lightpink paragraph, font family is Corsiva</div>
+        <button id="popup-button">This is a button</button>
+    </section>
+    <footer>
+        <form>
+            <label for="name">Name</label>
+            <input id="name" type="text">
+            <label for="email">Email</label>
+            <input id="email" type="email">
+            <label for="comments">Comments</label>
+            <textarea id="comments"></textarea>
+        </form>
+    </footer>
+</body>
+<script>
+    document.getElementById('popup-button').addEventListener('click', (event) => {window.alert('Hello');});
+</script>
+</html>
