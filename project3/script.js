@@ -79,7 +79,15 @@ function restart() {
 
 guessForm.addEventListener('submit', (event) => {
     event.preventDefault();
+
+    // manual data validation
     const guess = Number(new FormData(event.target).get('guess'));
+
+    if (!guess || guess < 1 || guess > 100 || (guess % 1 != 0)) {
+        showMessage('Please enter a valid whole number from 1 to 100');
+        return
+    }
+    
     if (guessHistoryArray.includes(guess)) {
         showMessage('You already guessed this number!');
         return;
