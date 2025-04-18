@@ -85,7 +85,7 @@ guessForm.addEventListener('submit', (event) => {
 
     if (!guess || guess < 1 || guess > 100 || (guess % 1 != 0)) {
         showMessage('Please enter a valid whole number from 1 to 100');
-        return
+        return;
     }
     
     if (guessHistoryArray.includes(guess)) {
