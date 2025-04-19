@@ -37,7 +37,7 @@ function revealSecretNumber() {
 function showMessage(message) {
     guessMessage.classList.remove('shake');
     guessMessage.textContent = message;
-    setTimeout(() => {guessMessage.classList.add('shake');}, 50);
+    setTimeout(() => {guessMessage.classList.add('shake');}, 10);
 }
 
 function addGuessToHistory(guess) {
