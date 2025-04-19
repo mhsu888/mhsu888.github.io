@@ -1,0 +1,242 @@
+/* General styling */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #a8e4e8; /* Light blue background */
+  color: #333;
+  line-height: 1.6;
+}
+
+h1 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 5px;
+  font-size: 32px;
+}
+
+/* Main container */
+#main-screen {
+  background-color: #f5f5dc; /* Cream/beige color */
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  margin: 20px auto;
+  text-align: center;
+}
+
+/* Header section */
+h1 + div {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Score display */
+.score-display > p {
+  display: inline-block;
+  margin: 0 20px 10px 0;
+}
+
+.score, .high-score {
+  font-weight: bold;
+}
+
+/* Score box */
+.score-display>p {
+  background-color: #ffb6b9; /* Pink color */
+  padding: 10px 20px;
+  border-radius: 10px;
+  display: inline-block;
+  margin: 10px;
+}
+
+/* Play area */
+.play {
+  background-color: #c8b6a6; /* Tan/brown background */
+  padding: 30px;
+  border-radius: 15px;
+  margin: 20px 0;
+  position: relative;
+  text-align: center;
+}
+
+/* Add cartoon character */
+.play::before {
+  content: "";
+  display: block;
+  width: 100px;
+  height: 120px;
+  margin: 0 auto 20px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 120'%3E%3Crect x='35' y='60' width='30' height='40' fill='%2388c057'/%3E%3Ccircle cx='50' cy='40' r='25' fill='%23b99d7c'/%3E%3Cpath d='M35 45 Q 50 60 65 45' fill='none' stroke='%23333' stroke-width='2'/%3E%3Ccircle cx='40' cy='35' r='3' fill='%23333'/%3E%3Ccircle cx='60' cy='35' r='3' fill='%23333'/%3E%3Cpath d='M30 25 Q 40 15 50 25 Q 60 15 70 25' fill='%234a6da7'/%3E%3Ccircle cx='70' cy='30' r='10' fill='%2389cff0'%3E%3Ctext x='70' y='33' font-size='12' text-anchor='middle' fill='%23333'%3E%3F%3C/text%3E%3C/circle%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* Form styling */
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+label {
+  font-weight: bold;
+  display: none; /* Hide the label as it's not in the screenshot */
+}
+
+input {
+  padding: 15px;
+  border: none;
+  border-radius: 30px;
+  font-size: 16px;
+  width: 250px;
+  text-align: center;
+  background-color: #f5f5dc;
+}
+
+input:focus {
+  outline: none;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Button styling */
+button {
+  padding: 12px 25px;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+button#submit-guess {
+  background-color: #5cb85c; /* Green button */
+  color: white;
+  width: 120px;
+}
+
+button#submit-guess:hover {
+  background-color: #4cae4c;
+}
+
+button#reset {
+  background-color: #ffb6b9; /* Pink reset button */
+  color: #333;
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  font-weight: bold;
+}
+
+button#reset:hover {
+  background-color: #ff9a9e;
+}
+
+button.restart {
+  background-color: #5cb85c;
+  color: white;
+}
+
+button.restart:hover {
+  background-color: #4cae4c;
+}
+
+/* Message display */
+#guess-message {
+  font-weight: bold;
+  min-height: 24px;
+  color: white;
+  margin-top: 15px;
+}
+
+/* Guess history */
+#guess-history {
+  background-color: #a8e4e8; /* Light blue */
+  padding: 15px;
+  border-radius: 15px;
+  margin: 20px auto;
+  width: 80%;
+  text-align: center;
+}
+
+#guess-history figcaption {
+  font-weight: bold;
+  font-size: 18px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+#guess-history-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+
+#guess-history-list li {
+  background-color: #ffb6b9; /* Pink history items */
+  color: #333;
+  padding: 5px 10px;
+  border-radius: 15px;
+  font-weight: bold;
+}
+
+/* Win/Lose screens */
+.win, .lose {
+  text-align: center;
+  padding: 20px;
+}
+
+.win h2 {
+  color: #5cb85c;
+}
+
+.lose h2 {
+  color: #d9534f;
+}
+
+.emoji {
+  font-size: 6rem;
+  margin: 0;
+}
+
+/* Media queries for responsiveness */
+@media screen and (max-width: 500px) {
+  #main-screen {
+    padding: 15px;
+  }
+  
+  input {
+    width: 80%;
+  }
+
+  button#reset {
+    position: static;
+    display: block;
+    margin: auto;
+  }
+}
+
+.shake {
+  animation: shake 0.2s;
+}
+
+@keyframes shake {
+  0% {
+    transform: translateX(-5%);
+  }
+  33% {
+    transform: translateX(5%);
+  }
+  67% {
+    transform: translateX(-2.5%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}

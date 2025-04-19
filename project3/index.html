@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guess the Number</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Guess the Number</h1>
+    <div class="score-display">
+        <p>Current score: <span class="score">10</span></p>
+        <p>High score: <span class="high-score">0</span></p>
+    </div>
+    <button id="reset" class="restart">Reset</button>
+    <div id="main-screen">
+        <div class="play">
+            <form>
+                <label for="guess">Guess a number from 1 to 100</label>
+                <!-- <input id="guess" name="guess" type="number" min="1" max="100" step="1" required> -->
+                <input id="guess" name="guess" type="text">
+                <button id="submit-guess" type="submit">Guess!</button>
+            </form>
+            <p id="guess-message"></p>
+        </div>
+        <div class="win" hidden>
+            <p class="emoji">&#128516;</p>
+            <h2>You win!</h2>
+            <p>Your guess was correct. <span class="secret-number"></span> is my secret number.</p>
+            <p>Your score: <span class="score"></span></p>
+            <p>Best: <span class="high-score"></span></p>
+            <button class="restart">Play again</button>
+        </div>
+        <div class="lose" hidden>
+            <p class="emoji">&#128557;</p>
+            <h2>Game over!</h2>
+            <p>Don't give up. You can win next time.</p>
+            <p>My secret number was <span class="secret-number"></span>.</p>
+            <button class="restart">Try again</button>
+        </div>
+    </div>
+    <figure id="guess-history">
+        <figcaption>Guess history</figcaption>
+        <ul id="guess-history-list"></ul>
+    </figure>
+
+    <script src="script.js"></script>
+</body>
+</html>
