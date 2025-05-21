@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Entry</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">
+</head>
+<body>
+    <div class="flex-column h-100">
+        <nav>
+            <a href="{{url_for('index')}}">Home</a>
+            <a href="{{url_for('journal')}}">My Journal</a>
+            <form action="/logout" method="post">
+                <button type="submit">Logout</button>
+            </form>
+        </nav>
+        <h1>New Journal Entry</h1>
+        <form action="/new" method="post" class="journal-form flex-grow">
+            <label for="title">Title:</label>
+            <input id="title" name="title" type="text" maxlength="100" required>
+            <label for="body">Write your journal entry:</label>
+            <textarea name="body" id="body" class="flex-grow" maxlength="1000" required></textarea>
+            <button type="submit">Add entry</button>
+        </form>
+    </div>
+</body>
+</html>

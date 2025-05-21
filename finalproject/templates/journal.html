@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Journal</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">
+</head>
+<body>
+    <nav>
+        <a href="{{url_for('index')}}">Home</a>
+        <a href="{{url_for('journal')}}">My Journal</a>
+        <form action="/logout" method="post">
+            <button type="submit">Logout</button>
+        </form>
+    </nav>
+    <h1>My Journal</h1>
+    <div class="flex-column journal">
+        <a href="{{url_for('new')}}" class="text-center">Write a new journal entry</a>
+        <br>
+        <div class="table-wrapper">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Date</th>
+                        <th>Title</th>
+                        <th>Journal Entry</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% if entries %}
+                        {% for entry in entries %}
+                        <tr>
+                            <td>{{entry.date.isoformat(' ', 'minutes')}}</td>
+                            <td><a href="{{url_for('edit', entry_id=entry.id)}}">{{entry.title}}</a></td>
+                            <td>{{entry.body}}</td>
+                        </tr>
+                        {% endfor %}
+                    {% else %}
+                    <tr>
+                        <td colspan="3">No journal entries yet!</td>
+                    </tr>
+                    {% endif %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+</html>
